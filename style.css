@@ -15,11 +15,12 @@
 
 /* variables color */
 :root {
-  --primary-color: #ffffff;
-  --secondary-color: #ffffff;
-  --accent-color: #ffffff;
-  --background-color: #ffffff;
-  --text-color: #000000;
+  --primary-color: #ecca08;
+  --secondary-color: #fdfbd8;
+  --accent-color: #3f048d;
+  --link-color: #ec9108;
+  --text-color: #e5d265;
+  --background-color: #20201d;
 }
 
 html {
@@ -27,6 +28,8 @@ html {
 }
 body {
   min-height: 100vh;
+  margin: 3rem;
+  background-color: var(--background-color);
 }
 
 .center {
@@ -36,3 +39,101 @@ body {
 }
 
 /* end of common styles */
+
+h1 {
+  text-align: center;
+  color: var(--primary-color);
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+h2 {
+  text-align: center;
+  color: var(--accent-color);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+section {
+  margin: 2rem auto;
+  width: 95%;
+  max-width: 50rem;
+
+  padding: 1rem 2rem;
+  border-radius: 6px;
+  background-color: var(--secondary-color);
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+  background-color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+  color: var(--text-color);
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: var(--accent-color);
+}
+
+.control {
+  margin: 1rem 0;
+}
+
+label,
+input {
+  display: block;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+input {
+  font: inherit;
+  font-size: 1.5rem;
+  border-radius: 4px;
+  border: 1px solid var(--secondary-color);
+  width: 3rem;
+  max-width: 100%;
+  padding: 0.5rem;
+  color: rgb(66, 63, 44);
+}
+
+input:focus {
+  background-color: var(--secondary-color);
+}
+
+a {
+  text-decoration: none;
+  color: var(--link-color);
+}
+
+.output {
+  font-weight: bold;
+  background-color: var(--text-color);
+  padding: 0.25rem;
+  border-radius: 4px;
+}
+
+a.highlight {
+  background-color: var(--accent-color);
+  padding: 0.25rem;
+}
+
+#calculated-sum {
+  padding: 1rem;
+  text-align: center;
+  font-size: 3rem;
+  display: none;
+}
+
+.output-text {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}

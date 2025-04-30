@@ -15,6 +15,68 @@
   </head>
 
   <body>
-    <h1>loops in action</h1>
+    <h1>javaScript loops in action</h1>
+    <section id="calculator">
+      <h2>javaScript calculator</h2>
+      <p>
+        determine the sum of all numbers (beginning at zero) up to a number of
+        your choice.
+      </p>
+      <div class="control">
+        <label for="user-number">your number</label>
+        <input type="number" id="user-number" />
+      </div>
+      <button>calculate sum</button>
+      <p id="calculated-sum" class="output"></p>
+    </section>
+
+    <section id="highlight-links">
+      <h2>highlight links</h2>
+      <button>highlight all links in the text</button>
+      <p>
+        this is some text that also contains useful links (like
+        <a href="">this one</a> that actually lead nowhere. they lead nowhere
+        because this text and example is <strong>not</strong> about the anchor
+        elements or the link destinations but instead about javaScript.
+      </p>
+      <p>
+        because you can use
+        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+          >javascript</a
+        >
+        (okay, this link actually <strong>does</strong> lead somewhere) not just
+        for funny demos or useless examples but for real useful things - like
+        highlighting all the links in a text.
+      </p>
+      <p>
+        you can dive even deeper into javascript with one of our bestselling,
+        deep-dive, javascript-focused
+        <a href="https://academind.com/courses/">courses</a>.
+      </p>
+    </section>
+
+    <section id="user-data">
+      <h2>your information</h2>
+      <button>display user data</button>
+      <ul id="output-user-data"></ul>
+    </section>
+
+    <section id="statistics">
+      <h2>statistics</h2>
+      <p>
+        test your luck and find out how many dice rolls (1-6 dice) it takes you
+        to roll a certain number (between 1 and 6).
+      </p>
+      <div class="control">
+        <label for="user-target-number">your target number</label>
+        <input type="number" min="1" max="6" id="user-target-number" />
+      </div>
+      <button>roll the dice</button>
+      <ul id="dice-rolls"></ul>
+      <p class="output-text">
+        it took you <span id="output-total-rolls" class="output">X</span> rolls
+        to roll a <span id="output-target-number" class="output">Y</span>.
+      </p>
+    </section>
   </body>
 </html>
