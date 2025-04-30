@@ -1,0 +1,38 @@
+/* google font ubuntu */
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+/* common styles */
+/* Reset Line */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  outline: none;
+  font-family: "Ubuntu", serif;
+  font-weight: 400;
+}
+
+/* variables color */
+:root {
+  --primary-color: #ffffff;
+  --secondary-color: #ffffff;
+  --accent-color: #ffffff;
+  --background-color: #ffffff;
+  --text-color: #000000;
+}
+
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+}
+body {
+  min-height: 100vh;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* end of common styles */
