@@ -62,3 +62,56 @@ function displayUserDate() {
 }
 
 displayUserDataButtonElement.addEventListener("click", displayUserDate); // when button is clicked, call displayUserDate function
+
+// statictic date / roll a dice
+
+const rollDiceButtonElement = document.querySelector("#statistics button"); // get the button
+
+// roll dice function
+function rollDice() {
+  return Math.floor(Math.random() * 6) + 1; // generate a random number between 1 and 6
+}
+
+// number of rolls function
+function deriveNumberOfDiceRolls() {
+  const targetNumberInputElement =
+    document.getElementById("user-target-number"); // get the input field
+  const diceRollsListElement = document.getElementById("dice-rolls"); // get the output field
+
+  const enteredNumber = targetNumberInputElement.value; // get the value of the input field
+  diceRollsListElement.innerHTML = ""; // clear the output field
+
+  // check if number is between 1 and 6
+  if (enteredNumber < 1 || enteredNumber > 6 || isNaN(enteredNumber)) {
+    alert("Please enter a number between 1 and 6.");
+    return; // exit the function
+  }
+
+  let hasRolledTargetNumber = false; // variable to check if the target number has been rolled
+  let numberOfRolls = 0; // variable to store the number of rolls
+
+  while (!hasRolledTargetNumber) {
+    const rollNumber = rollDice(); // roll the dice
+
+    // if (rollNumber == enteredNumber) {
+    //   hasRolledTargetNumber = true; // set the variable to true if the target number has been rolled
+    // }
+
+    numberOfRolls++; // increment the number of rolls
+    const newRollListItemElement = document.createElement("li"); // create a new list item element
+    const outputText = `Roll ${numberOfRolls}: ${rollNumber}`; // set the text content of the list item
+    newRollListItemElement.textContent = outputText; // set the text content of the list item
+    diceRollsListElement.append(newRollListItemElement); // append the list item to the output field
+    hasRolledTargetNumber = rollNumber == enteredNumber; // set the variable to true if the target number has been rolled
+  }
+
+  const outputTotalRollsElement = document.getElementById("output-total-rolls"); // get the output field
+  const outputTargetNumberElement = document.getElementById(
+    "output-target-number"
+  ); // get the output field
+
+  outputTargetNumberElement.textContent = enteredNumber; // display the target number
+  outputTotalRollsElement.textContent = numberOfRolls; // display the number of rolls
+}
+
+rollDiceButtonElement.addEventListener("click", deriveNumberOfDiceRolls); // when button is clicked, call deriveNumberOfDiceRoll function
