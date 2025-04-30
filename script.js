@@ -35,3 +35,30 @@ function highlightLinks() {
 }
 
 highlightLinksButtonElement.addEventListener("click", highlightLinks); // when button is clicked, call highlightLinks function
+
+// display user data
+const dummyUserData = {
+  firstName: "andrei",
+  lastName: "razvan",
+  age: 1,
+  jobTitle: "it support",
+  hobbies: ["sports", "coding"],
+};
+
+const displayUserDataButtonElement =
+  document.querySelector("#user-data button"); // get the button
+
+// display user data function
+function displayUserDate() {
+  // console.log("displaying user data..."); // log to console
+  const userDataElement = document.getElementById("output-user-data"); // get the output field
+  userDataElement.innerHTML = ""; // clear the output field
+
+  for (const key in dummyUserData) {
+    const newUserDataElement = document.createElement("li"); // create a new list item element
+    newUserDataElement.textContent = `${key} : ${dummyUserData[key]}`; // set the text content of the list item
+    userDataElement.append(newUserDataElement); // append the list item to the output field
+  }
+}
+
+displayUserDataButtonElement.addEventListener("click", displayUserDate); // when button is clicked, call displayUserDate function
